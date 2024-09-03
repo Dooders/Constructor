@@ -2,7 +2,7 @@
 
 With `Constructor`, researchers and enthusiasts can model and simulate abstract "constructors"—entities capable of performing tasks on physical systems without undergoing any net change themselves. The library allows users to define tasks, substrates, and conditions under which transformations can occur, enabling the exploration of fundamental questions about the nature of possibility and impossibility in physics.
 
-### **Key Features:**
+## **Key Features**
 
 - **Constructor Modeling**: Define constructors, abstract machines that can perform specific tasks without being degraded by the process. Constructors are central to the framework and can be customized to fit a variety of scenarios.
 
@@ -18,7 +18,7 @@ With `Constructor`, researchers and enthusiasts can model and simulate abstract 
 
 - **Visualization and Analysis**: (Planned feature) Tools for visualizing the results of simulations, including state transitions and the network of possible transformations.
 
-### **Use Cases:**
+## **Use Cases**
 
 - **Theoretical Physics Research**: Explore fundamental questions about what can or cannot be done within the laws of physics, testing hypotheses related to information theory, thermodynamics, and quantum mechanics.
 
