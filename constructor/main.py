@@ -1,7 +1,11 @@
 """
-Entities that perform tasks. A constructor can carry out a transformation (task) 
-repeatedly without being degraded by it. In a sense, it is an abstract machine 
-that causes changes but is not itself changed.
+In Constructor Theory, a constructor is an abstract entity or machine capable of 
+performing specific tasks on a substrate, repeatedly and reliably, without 
+undergoing any net change itself. 
+
+Constructors are fundamental because they are the agents that cause transformations 
+in physical systems. The theory posits that the set of all possible tasks is 
+determined by what constructors can perform.
 """
 
 from typing import TYPE_CHECKING, List

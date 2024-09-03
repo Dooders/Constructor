@@ -1,5 +1,10 @@
 """
-Conditions are requirements that must be met for a task to be performed on a substrate.
+In Constructor Theory, conditions are constraints or prerequisites that must be 
+satisfied for a task to be executed. 
+
+Conditions determine whether a task is possible given the state of the substrate, 
+the properties of the environment, or other factors. They play a crucial role in 
+defining the feasibility of transformations within a physical system.
 """
 
 from typing import TYPE_CHECKING, Callable
@@ -25,7 +30,9 @@ class Condition:
         Check the condition against a substrate.
     """
 
-    def __init__(self, name: str, check_function: Callable[["Substrate"], bool]) -> None:
+    def __init__(
+        self, name: str, check_function: Callable[["Substrate"], bool]
+    ) -> None:
         """
         Initialize a Condition.
 

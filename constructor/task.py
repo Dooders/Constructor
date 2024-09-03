@@ -1,7 +1,9 @@
 """
-A task is a physical transformation that could occur, such as converting one state of a system 
-into another. In Constructor Theory, tasks are not tied to time; instead, the focus is on 
-whether a task can be achieved at all.
+In Constructor Theory, a task is a fundamental concept representing a possible 
+transformation or operation that can be performed on a substrate. 
+
+A task describes the change from one state to another and is central to 
+understanding what is possible or impossible in a given physical system.
 """
 
 from typing import TYPE_CHECKING, List
@@ -13,7 +15,8 @@ if TYPE_CHECKING:
 
 class Task:
     """
-    A task is an abstract description of a transformation that can be performed on a substrate.
+    A task is an abstract description of a transformation that can be performed
+    on a substrate.
 
     Attributes
     ----------
