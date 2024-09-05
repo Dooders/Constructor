@@ -1,7 +1,6 @@
 """
-In Constructor Theory, a constructor is an abstract entity or machine capable of 
-performing specific tasks on a substrate, repeatedly and reliably, without 
-undergoing any net change itself. 
+A constructor is an abstract entity or machine capable of performing specific 
+tasks on a substrate, repeatedly and reliably, without undergoing any net change itself. 
 
 Constructors are fundamental because they are the agents that cause transformations 
 in physical systems. The theory posits that the set of all possible tasks is 
@@ -62,7 +61,7 @@ class Constructor:
         bool
             True if the constructor can perform the task, False otherwise.
         """
-        return task in self.capabilities
+        return task.name in [t.name for t in self.capabilities]
 
     def perform(self, task: "Task", substrate: "Substrate") -> bool:
         """

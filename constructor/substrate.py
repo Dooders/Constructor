@@ -1,6 +1,5 @@
 """
-In Constructor Theory, substrates are the physical systems or entities upon which 
-tasks are performed. 
+Substrates are the physical systems or entities upon which tasks are performed. 
 
 Substrates can be thought of as the "materials" that constructors work on to 
 produce specific transformations. The role of substrates in Constructor Theory 

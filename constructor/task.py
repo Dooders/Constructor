@@ -1,6 +1,6 @@
 """
-In Constructor Theory, a task is a fundamental concept representing a possible 
-transformation or operation that can be performed on a substrate. 
+A task is a fundamental concept representing a possible transformation or 
+operation that can be performed on a substrate. 
 
 A task describes the change from one state to another and is central to 
 understanding what is possible or impossible in a given physical system.

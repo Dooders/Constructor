@@ -1,6 +1,6 @@
 """
-In Constructor Theory, conditions are constraints or prerequisites that must be 
-satisfied for a task to be executed. 
+Conditions are constraints or prerequisites that must be satisfied for a task 
+to be executed. 
 
 Conditions determine whether a task is possible given the state of the substrate, 
 the properties of the environment, or other factors. They play a crucial role in 
