@@ -1,6 +1,10 @@
-`Constructor` is a Python library designed to facilitate the simulation and exploration of Constructor Theory, a novel framework that reimagines the fundamental principles of physics. Rather than focusing on the dynamics of how systems evolve over time, Constructor Theory emphasizes what transformations (or "tasks") are possible or impossible within the physical laws of the universe.
+# Constructor
+
+`Constructor` is a Python library designed to facilitate the simulation and exploration of [Constructor Theory](https://www.constructortheory.org/), a novel framework that reimagines the fundamental principles of physics. Rather than focusing on the dynamics of how systems evolve over time, Constructor Theory emphasizes what transformations (or "tasks") are possible or impossible within the physical laws of the universe.
 
 With `Constructor`, researchers and enthusiasts can model and simulate abstract "constructors"—entities capable of performing tasks on physical systems without undergoing any net change themselves. The library allows users to define tasks, substrates, and conditions under which transformations can occur, enabling the exploration of fundamental questions about the nature of possibility and impossibility in physics.
+
+Based on the theory developed by [David Deutsch](https://www.daviddeutsch.org.uk/) and [Chiara Marletto](https://www.chiaramarletto.com/)
 
 ## **Key Features**
 
@@ -25,3 +29,18 @@ With `Constructor`, researchers and enthusiasts can model and simulate abstract 
 - **Educational Tools**: Provide students with a hands-on way to understand the principles of Constructor Theory, allowing them to simulate and visualize abstract concepts.
 
 - **Interdisciplinary Applications**: Apply the principles of Constructor Theory to other fields, such as biology (evolution of life), computer science (computation theory), and engineering (design of resilient systems).
+
+## **Installation**
+
+```bash
+pip install constructor-lib
+```
+
+## **Usage**
+
+Take a look at a simple example or one of the sample implementations:
+
+- [Information](./examples/information.ipynb)
+- [Thermodynamics](./examples/thermodynamics.ipynb)
+- [Quantum](./examples/quantum.ipynb)
+- [Cellular Automata](./examples/cellular_automata.ipynb)
