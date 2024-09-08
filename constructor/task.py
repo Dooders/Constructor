@@ -6,7 +6,8 @@ A task describes the change from one state to another and is central to
 understanding what is possible or impossible in a given physical system.
 """
 
-from typing import TYPE_CHECKING, List
+from functools import wraps
+from typing import TYPE_CHECKING, Callable, List, Union
 
 if TYPE_CHECKING:
     from constructor.condition import Condition
@@ -22,10 +23,6 @@ class Task:
     ----------
     name: str
         Name of the task.
-    input_state: str
-        The initial state before transformation.
-    output_state: str
-        The resulting state after transformation.
     conditions: List[Condition]
         Optional conditions that must be met for the task to be performed.
 
@@ -33,15 +30,13 @@ class Task:
     -------
     is_possible(substrate: Substrate) -> bool
         Check if the task can be performed on the given substrate.
-    execute(substrate: Substrate) -> bool
+    execute(substrate: Substrate) -> Union[Substrate, bool]
         Perform the task on the substrate, changing its state if possible.
     """
 
     def __init__(
         self,
         name: str,
-        input_state: str,
-        output_state: str,
         conditions: List["Condition"] = None,
     ) -> None:
         """
@@ -51,17 +46,11 @@ class Task:
         ----------
         name: str
             Name of the task.
-        input_state: str
-            The initial state before transformation.
-        output_state: str
-            The resulting state after transformation.
         conditions: List[Condition]
             Optional conditions that must be met for the task to be performed.
         """
         self.name = name
-        self.input_state = input_state
-        self.output_state = output_state
-        self.conditions = conditions if conditions else []
+        self.conditions = conditions
 
     def is_possible(self, substrate: "Substrate") -> bool:
         """
@@ -77,25 +66,28 @@ class Task:
         bool
             True if the task can be performed, False otherwise.
         """
-        if substrate.state == self.input_state:
-            return all(condition.check(substrate) for condition in self.conditions)
-        return False
 
-    def execute(self, substrate: "Substrate") -> bool:
+        return all(condition.check(substrate) for condition in self.conditions)
+
+    @classmethod
+    def execute(cls) -> Callable[["Substrate"], Union["Substrate", bool]]:
         """
-        Perform the task on the substrate, changing its state if possible.
-
-        Parameters
-        ----------
-        substrate: Substrate
-            The substrate to transform.
+        Decorator for task execution to check if the task is possible before
+        performing it.
 
         Returns
         -------
-        bool
-            True if the task was successfully performed, False otherwise.
+        Callable[["Substrate"], Union["Substrate", bool]]
+            A function that performs the task on a substrate.
+            Returns the substrate if the task is possible, False otherwise.
         """
-        if self.is_possible(substrate):
-            substrate.state = self.output_state
-            return True
-        return False
+
+        def decorator(substrate: "Substrate", *args) -> Union["Substrate", bool]:
+            if cls.is_possible(substrate):
+                substrate = cls(substrate, *args)
+
+                return substrate
+            else:
+                return False
+
+        return decorator
