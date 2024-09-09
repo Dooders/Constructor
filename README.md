@@ -42,5 +42,4 @@ Take a look at a simple example or one of the sample implementations:
 
 - [Information](./examples/Information.ipynb)
 - [Thermodynamics](./examples/Thermodynamics.ipynb)
-- [Quantum](./examples/Quantum.ipynb)
 - [Cellular Automata](./examples/CellularAutomata.ipynb)
