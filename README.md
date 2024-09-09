@@ -40,7 +40,7 @@ pip install constructor-lib
 
 Take a look at a simple example or one of the sample implementations:
 
-- [Information](./examples/information.ipynb)
-- [Thermodynamics](./examples/thermodynamics.ipynb)
-- [Quantum](./examples/quantum.ipynb)
-- [Cellular Automata](./examples/cellular_automata.ipynb)
+- [Information](./examples/Information.ipynb)
+- [Thermodynamics](./examples/Thermodynamics.ipynb)
+- [Quantum](./examples/Quantum.ipynb)
+- [Cellular Automata](./examples/Cellular_Automata.ipynb)
